@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Tasks | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="page-transition">
+    <div class="app-container">
+        <aside class="sidebar slide-in-left">
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i> <span>ProTasks</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item active"><i class="fa-solid fa-inbox"></i> Barcha vazifalar</a>
+                <a href="create.html" class="nav-item"><i class="fa-solid fa-plus"></i> Yangi qo'shish</a>
+            </nav>
+        </aside>
+
+        <main class="main-content fade-in-up">
+            <header class="topbar">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Vazifalarni qidirish...">
+                </div>
+            </header>
+
+            <section class="dashboard-header">
+                <div>
+                    <h1>Bugungi vazifalar</h1>
+                    <p class="subtitle" id="dateDisplay">Sana yuklanmoqda...</p>
+                </div>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">Barchasi</button>
+                    <button class="filter-btn" data-filter="pending">Jarayonda</button>
+                    <button class="filter-btn" data-filter="completed">Bajarilgan</button>
+                </div>
+            </section>
+
+            <div class="task-container" id="taskList">
+                <!-- Vazifalar JS orqali chiqadi -->
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
